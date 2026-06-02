@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data users lists</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+        border: 1px solid rgb(232, 232, 232);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    th,
+    td {
+        border: 1px solid rgb(232, 232, 232);
+        padding: 8px;
+    }
+
+    th {
+        background-color: #e2e2ff;
+        color: green;
+    }
+
+    .user-table tr:nth-child(even) td {
+        background-color: #efefef;
+    }
+
+    /* .user-table tr:nth-child(2) td {
+        background-color: #880f0f;
+        color: white;
+    } */
+
+    .user-table tr:hover td {
+        background-color: #dbdbdb;
+    }
+</style>
+
+<body>
+    <h1>Data Users List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>123-456-7890</td>
+                <td>john.doe@example.com</td>
+                <td>123 Main St, Anytown, USA</td>
+                <td rowspan="3">Phnom Penh</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+                <td>987-654-3210</td>
+                <td>jane.smith@example.com</td>
+                <td>456 Elm St, Othertown, USA</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jane Smit3</td>
+                <td>987-654-3210</td>
+                <td>jane.smith@example.com</td>
+                <td>456 Elm St, Othertown, USA</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="font-weight: 700;">Total User:</td>
+                <td colspan="2">2</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>123-456-7890</td>
+                <td>john.doe@example.com</td>
+                <td>123 Main St, Anytown, USA</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+                <td>987-654-3210</td>
+                <td>jane.smith@example.com</td>
+                <td>456 Elm St, Othertown, USA</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jane Smit3</td>
+                <td>987-654-3210</td>
+                <td>jane.smith@example.com</td>
+                <td>456 Elm St, Othertown, USA</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jane Smit3</td>
+                <td>987-654-3210</td>
+                <td>jane.smith@example.com</td>
+                <td>456 Elm St, Othertown, USA</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jane Smit3</td>
+                <td>987-654-3210</td>
+                <td>jane.smith@example.com</td>
+                <td>456 Elm St, Othertown, USA</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jane Smit3</td>
+                <td>987-654-3210</td>
+                <td>jane.smith@example.com</td>
+                <td>456 Elm St, Othertown, USA</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="font-weight: 700;">Total User:</td>
+                <td colspan="2">2</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
