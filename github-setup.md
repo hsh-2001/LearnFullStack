@@ -15,6 +15,42 @@ Git is the tool that tracks code changes on your computer.
 
 GitHub is the online service where you store, back up, and share Git repositories.
 
+### How Git and GitHub Work Together
+
+Think of your project in three places:
+
+1. **Working folder**: the files you edit on your computer.
+2. **Local Git repository**: the saved history on your computer.
+3. **GitHub repository**: the online copy stored in your GitHub account.
+
+The normal workflow is:
+
+```text
+edit files -> git add -> git commit -> git push
+```
+
+Meaning:
+
+- `git add` chooses which changes you want to save.
+- `git commit` saves those changes into Git history on your computer.
+- `git push` uploads your commits to GitHub.
+- `git pull` downloads new commits from GitHub to your computer.
+
+Important: GitHub is not the same thing as Git. Git can work without GitHub, but GitHub needs Git repositories.
+
+### Words You Should Know First
+
+| Word | Meaning |
+| --- | --- |
+| Repository | A project folder tracked by Git |
+| Commit | A saved version of your changes |
+| Branch | A separate line of work in the same repository |
+| Remote | The online repository address, usually GitHub |
+| Clone | Download a GitHub repository to your computer |
+| Push | Upload your commits to GitHub |
+| Pull | Download the newest commits from GitHub |
+| Stage | Select files for the next commit |
+
 ## 2. Create a GitHub Account
 
 1. Open this website:
@@ -747,6 +783,46 @@ git log --oneline
 
 Shows recent commits.
 
+### Check Remote Repository
+
+```bash
+git remote -v
+```
+
+Shows where your local repository pushes and pulls code.
+
+### Create a Branch
+
+```bash
+git switch -c feature-name
+```
+
+Creates a new branch and moves you to it.
+
+Branch names should be short and clear:
+
+```text
+add-login-page
+fix-navbar-spacing
+update-readme
+```
+
+### Switch Branches
+
+```bash
+git switch main
+```
+
+Moves you back to the `main` branch.
+
+### See Changed Lines
+
+```bash
+git diff
+```
+
+Shows the exact file changes that are not committed yet.
+
 ## 17. Recommended Folder Structure
 
 Keep your coding projects in one main folder.
@@ -929,6 +1005,38 @@ git commit -m "Resolve merge conflict"
 git push
 ```
 
+### Problem: You Added the Wrong File Before Commit
+
+If you ran `git add` but have not committed yet, unstage the file:
+
+```bash
+git restore --staged filename
+```
+
+Example:
+
+```bash
+git restore --staged notes.md
+```
+
+This does not delete the file. It only removes the file from the next commit.
+
+### Problem: You Changed a File and Want to Discard the Change
+
+Use this only when you are sure you do not need the change:
+
+```bash
+git restore filename
+```
+
+Example:
+
+```bash
+git restore notes.md
+```
+
+This brings the file back to the last committed version.
+
 ## 21. Final Setup Checklist
 
 Use this checklist to confirm your setup is complete.
@@ -978,3 +1086,102 @@ After setup, practice in this order:
 8. Check the result on GitHub.
 9. Repeat until the workflow feels familiar.
 
+## 24. Commit Message Examples
+
+A good commit message says what changed. Keep it short, clear, and specific.
+
+Good examples:
+
+```text
+Add homepage navigation
+Fix login form validation
+Update GitHub setup guide
+Create student profile page
+```
+
+Avoid unclear messages:
+
+```text
+update
+fix
+changes
+final
+```
+
+For beginners, this format is enough:
+
+```text
+Action + what changed
+```
+
+Examples:
+
+- `Add contact form`
+- `Fix image path`
+- `Update README instructions`
+
+## 25. What to Put in `.gitignore`
+
+A `.gitignore` file tells Git which files should not be committed.
+
+Common examples:
+
+```gitignore
+node_modules/
+.env
+.DS_Store
+dist/
+build/
+```
+
+Do not commit:
+
+- Passwords
+- API keys
+- Secret tokens
+- Large dependency folders such as `node_modules`
+- Temporary build output
+
+For a basic JavaScript project, create `.gitignore` in the project root:
+
+```text
+node_modules/
+.env
+.DS_Store
+```
+
+Then check:
+
+```bash
+git status
+```
+
+Git should no longer show ignored files.
+
+## 26. Simple Practice Exercise
+
+Use this exercise to confirm that you understand the full flow:
+
+1. Create a repository named `practice-git`.
+2. Clone it to your computer.
+3. Create `index.html`.
+4. Add a heading inside the file.
+5. Run `git status`.
+6. Run `git add index.html`.
+7. Run `git commit -m "Add first HTML page"`.
+8. Run `git push`.
+9. Open GitHub and confirm that `index.html` is visible.
+
+Then practice one more change:
+
+1. Edit `index.html`.
+2. Run `git diff`.
+3. Run `git add .`.
+4. Run `git commit -m "Update homepage content"`.
+5. Run `git push`.
+
+## 27. Khmer Version
+
+A Khmer starter version is available here:
+
+[មគ្គុទ្ទេសក៍បង្កើត GitHub និងរៀបចំ Git ជាភាសាខ្មែរ](github-setup-km.md)
