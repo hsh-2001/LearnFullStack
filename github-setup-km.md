@@ -4,6 +4,11 @@
 
 បើអ្នកចង់មើលអត្ថបទលម្អិតជាភាសាអង់គ្លេស សូមមើល [GitHub Account and Git Setup Guide](github-setup.md)។
 
+## Docs Menu
+
+- [ភាសាខ្មែរ: មគ្គុទ្ទេសក៍បង្កើត GitHub និងរៀបចំ Git](github-setup-km.md)
+- [English: GitHub Account and Git Setup Guide](github-setup.md)
+
 ## 1. អ្វីដែលអ្នកនឹងរៀបចំ
 
 អ្នកនឹងរៀបចំ 4 ចំណុចសំខាន់៖

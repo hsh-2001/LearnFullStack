@@ -2,6 +2,11 @@
 
 This guide explains how to create a GitHub account and configure Git on both Windows and macOS devices. It is written for beginners who want to use GitHub for coding projects, learning full stack development, and sharing code online.
 
+## Docs Menu
+
+- [English: GitHub Account and Git Setup Guide](github-setup.md)
+- [ភាសាខ្មែរ: មគ្គុទ្ទេសក៍បង្កើត GitHub និងរៀបចំ Git](github-setup-km.md)
+
 ## 1. What You Are Setting Up
 
 You will set up four things:
