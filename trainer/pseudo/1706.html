@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Pseudo</title>
+    <style>
+        p {
+            font-size: 20px;
+            line-height: 1.5;
+            color: #333;
+        }
+        div::first-letter {
+            font-size: 50px;
+            color: rgb(0, 31, 15);
+            font-weight: bold;
+        }
+
+        p::first-line {
+            font-size: 30px;
+            font-weight: bold;
+            color: red;
+        }
+        p::selection {
+            background-color: yellow;
+            color: red;
+            text-decoration: underline;
+        }
+        input::placeholder {
+            color: red;
+            font-size: 8px;
+        }
+        input {
+            color: blue;
+        }
+
+        li::marker {
+            content: "👉";
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- First letter -->
+    <div class="title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, blanditiis! Repudiandae fugit doloremque asperiores obcaecati veniam blanditiis, aliquid at nesciunt?</div>
+    <!-- First line && selection -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dolorum sunt nobis optio, ex omnis expedita laudantium? Officia neque consequatur, illo maiores ut quae cum corporis, error iure architecto distinctio quisquam laborum amet impedit voluptate. Mollitia eum veritatis quod aperiam vero asperiores delectus sunt, natus nisi neque enim molestiae earum?</p>
+
+    <h4>Input placeholder</h4>
+    <input type="text" placeholder="enter username" />
+
+    <!-- :marker -->
+     <h4>List with marker adjustment</h4>
+     <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+     </ul>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-width: 100vw;
+            min-height: 100vh;
+            box-sizing: border-box;
+            background: linear-gradient(45deg, rgb(45, 0, 124), rgb(0, 255, 255));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form {
+            background: #f3f3f3;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-title {
+            font-size: 24px;
+            color: #1c00d5;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        label {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 5px;
+            align-items: end;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 4px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-button {
+            display: flex;
+            justify-content: end;
+        }
+
+        .submit-button>button {
+            background: #1c00d5;
+            color: #fff;
+            border: none;
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-button>button:hover {
+            background: #03c8ff;
+            box-shadow: 0 0 5px #03c8ff;
+        }
+
+        .submit-button>button:focus {
+            background: #00ee00;
+        }
+
+        .submit-button>button:active {
+            background: #e7d000;
+        }
+
+        input {
+            font-size: 12px;
+        }
+
+        .form-group label {
+            width: 100px;
+            font-size: 12px;
+        }
+
+        .form-group input:focus {
+            border: 1px solid #67d500;
+            outline: none;
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 5px;
+        }
+
+        .checkbox>label {
+            font-size: 12px;
+        }
+
+        .checkbox input:checked,
+        .checkbox input:checked+label {
+            color: #67d500;
+            accent-color: #67d500;
+        }
+
+        input:disabled {
+            background-color: #987f7f;
+            color: red;
+        }
+
+        input[type="checkbox"]:disabled {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 3px;
+        }
+
+        input:required {
+            border: 1px solid rgb(255, 179, 179);
+        }
+
+        .form-group label:has(+ input:required)::before {
+            content: "*";
+            color: red;
+            margin-right: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form class="form">
+            <div class="form-title">Register Form</div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input required type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" required id="password" name="password">
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+            <div class="submit-button">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
